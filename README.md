@@ -8,8 +8,8 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/DomilsonFirmino/Advice-generator-app)
+- Live Site URL: [Add live site URL here](https://domilsonfirmino.github.io/Advice-generator-app/)
 
 ## My process
 
