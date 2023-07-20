@@ -6,26 +6,25 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="./src/style/input.css">
+  <link rel="stylesheet" href="./src/style/main.css">
   
   <title>Frontend Mentor | Advice generator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    .inativo{
-      cursor: auto;
-      pointer-events: none;
-      background-color: gray;
-    }
-  </style>
 </head>
-<body>
+<body class="grid place-items-center h-full min-h-screen bg-gray-800">
 
-  <p class="show"></p>
-  <button class="click">Clickme</button>
-  
+  <main class="px-8 md:px-0">
+
+    <div class="card bg-gray-700 min-w-full max-w-sm p-5 text-center rounded-md relative">
+      <h1 class="text-green-400 text-lg font-semibold">Advice #<span class="advice__number">1</span></h1>
+      <p class="show advice text-3xl font-bold text-white before:content-[open-quote] after:content-[close-quote]"></p>
+      <img class="pb-6 block" src="./images/pattern-divider-desktop.svg">
+      <button class="click w-14 absolute bottom-0 left-[50%] right-[50%] translate-x-[-50%] translate-y-[50%] aspect-square grid place-items-center border-none bg-green-500 rounded-full hover:bg-green-400 hover:shadow-green-400 hover:shadow-2xl">
+        <img src="./images/icon-dice.svg" alt="" class=" block w-[50%]">
+      </button>
+    </div>
+    
+  </main>
 
   <script src="./src/script/script.js"></script>
 </body>

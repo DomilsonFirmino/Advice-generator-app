@@ -56,6 +56,8 @@ button.addEventListener("click", async () =>{
    })
 });
 */
+let advicecount = 0;
+
 function advice(){
    fetch("https://api.adviceslip.com/advice")
    .then( Response =>{
@@ -78,8 +80,10 @@ button.addEventListener("click", advice);
 
 
 function inativo(){
-   button.classList.toggle("inativo");
+   advicecount = advicecount + 1
+   document.querySelector(".advice__number").innerHTML = advicecount;
+   button.classList.add("inativo");
    setTimeout(()=>{
-      button.classList.toggle("inativo");
-   },2000)
+      button.classList.remove("inativo");
+   },3000)
 }

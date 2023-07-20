@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+   .card > * + *{
+      @apply mt-5;
+   }
+
+   .inativo{
+      @apply bg-gray-500 pointer-events-none cursor-none;
+   }
+}
