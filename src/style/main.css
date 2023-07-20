@@ -578,10 +578,6 @@ video {
   width: 3.5rem;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-\[50\%\] {
   width: 50%;
 }
@@ -635,10 +631,6 @@ video {
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .p-5 {
   padding: 1.25rem;
 }
@@ -656,19 +648,18 @@ video {
   text-align: center;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.font-Manrope {
+  font-family: Manrope, sans-serif;
 }
 
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -693,35 +684,7 @@ video {
   margin-top: 1.25rem;
 }
 
-.inativo {
-  pointer-events: none;
-  cursor: none;
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
 .before\:content-\[open-quote\]::before {
-  --tw-content: open-quote;
-  content: var(--tw-content);
-}
-
-.after\:contents::after {
-  content: var(--tw-content);
-  display: contents;
-}
-
-.after\:text-2xl::after {
-  content: var(--tw-content);
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.after\:content-\[\'_\2197\'\]::after {
-  --tw-content: ' ↗';
-  content: var(--tw-content);
-}
-
-.after\:content-\[open-quote\]::after {
   --tw-content: open-quote;
   content: var(--tw-content);
 }
@@ -736,12 +699,6 @@ video {
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
-.hover\:shadow:hover {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -753,40 +710,9 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-@media (min-width: 640px) {
-  .sm\:mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  @media (min-width: 640px) {
-    .sm\:sm\:px-8 {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-}
-
 @media (min-width: 768px) {
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
