@@ -684,6 +684,13 @@ video {
   margin-top: 1.25rem;
 }
 
+.click:disabled {
+  pointer-events: none;
+  cursor: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .before\:content-\[open-quote\]::before {
   --tw-content: open-quote;
   content: var(--tw-content);
@@ -708,6 +715,11 @@ video {
 .hover\:shadow-green-400:hover {
   --tw-shadow-color: #4ade80;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.disabled\:bg-gray-500:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {

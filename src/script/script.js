@@ -1,89 +1,44 @@
-/*
-async function advice(){
-   try{
-      const response = await fetch("https://api.adviceslip.com/advice");
-      const advices = await response.json();
-      return advices;
-   }catch (error){
-      console.log("error: ",error);
-   }
-}
-
-const button = document.querySelector(".click");
-button.addEventListener("click",() =>{
-   console.log(advice().then(value =>{
-      return value['slip']
-   }));
-})
-*/
-
-/*
-function advice(){
-   fetch("https://api.adviceslip.com/advice")
-   .then( Response =>{
-      return (Response.json());
-   }).then( response =>{
-      return (response['slip']);
-   }).then(response =>{
-      document.querySelector(".show").innerHTML = response['advice'];
-   })
-   .catch( error =>{
-      document.querySelector(".show").innerHTML = error;
-   })
-}
-
-
-const button = document.querySelector(".click");
-button.addEventListener("click", advice);
-*/
-/*
-async function adviceGen(){
-   try{
-      const response = await fetch("https://api.adviceslip.com/advice");
-      const data = await response.json();
-      return data['slip'];
-   }catch (erro){
-      return erro;
-   }
-}
-
-const button = document.querySelector(".click");
-button.addEventListener("click", async () =>{
-   adviceGen().then(response =>{
-      return response['advice'];
-   }).then( response =>{
-      document.querySelector(".show").innerHTML = response;
-   })
-});
-*/
 let advicecount = 0;
 
-function advice(){
-   fetch("https://api.adviceslip.com/advice")
-   .then( Response =>{
-      return (Response.json());
-   }).then( response =>{
-      return (response['slip']);
-   }).then(response =>{
-      document.querySelector(".show").innerHTML = response['advice'];
-      inativo();
-   })
-   .catch( error =>{
-      document.querySelector(".show").innerHTML = error;
-   })
-}
-
-window.onload = advice();
-
+const showDiv = document.querySelector(".show");
 const button = document.querySelector(".click");
 button.addEventListener("click", advice);
 
+window.document.onload = advice()
 
-function inativo(){
+async function advice(){
+
+   button.disabled = "true"
+   
+   if(button.disabled == "true"){
+      return
+   }
+
+   try {
+      const response = await fetch('https://api.adviceslip.com/advice?t=' + Math.random());
+      if(!response.ok)
+         throw Error("something went wrong")
+      const data = await response.json()
+      uppcount()
+      ButtonToggler()
+      showMessague(data.slip.advice)
+   } catch (error) {
+      console.log(error)
+      showMessague(error.message)
+   }  
+}
+
+function uppcount(){
    advicecount = advicecount + 1
    document.querySelector(".advice__number").innerHTML = advicecount;
-   button.classList.add("inativo");
+}
+
+function ButtonToggler(){  
    setTimeout(()=>{
-      button.classList.remove("inativo");
-   },3000)
+      button.disabled=""
+   },5000)
+}
+
+function showMessague(payload = ""){
+   showDiv.innerHTML = payload
 }

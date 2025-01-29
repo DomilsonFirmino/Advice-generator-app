@@ -8,7 +8,7 @@
       @apply mt-5;
    }
 
-   .inativo{
+   .click:disabled{
       @apply bg-gray-500 pointer-events-none cursor-none;
    }
 }
